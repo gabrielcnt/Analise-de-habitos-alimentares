@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Saúde</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        Primeiro nome:
+        <input type="text" id="fieldName" placeholder="Digite seu nome" />
+      </div>
+
+      <div>
+        Sobrenome:
+        <input
+          type="text"
+          id="fieldsurname"
+          placeholder="Digite seu sobrenome"
+        />
+      </div>
+
+      <div>
+        Idade:
+        <input type="number" id="fieldage" placeholder="Digite sua idade" />
+      </div>
+
+      <div>
+        Gênero:
+        <label>
+          <input type="radio" id="fieldWoman" name="genero" value="feminino" />
+          Feminino
+        </label>
+        <label>
+          <input type="radio" id="fieldMan" name="genero" value="masculino" />
+          Masculino
+        </label>
+      </div>
+
+      <div>
+        Quantas refeições você faz por dia? Digite somente a quantidade!
+        <input
+          type="number"
+          id="fieldMeals"
+          placeholder="Digite quantidade de refeições"
+          min="0"
+        />
+      </div>
+
+      <div>
+        Ingere frutas na alimentação?
+        <label>
+          <input type="radio" id="fieldFruitYes" name="frutas" value="true" />
+          Sim
+        </label>
+        <label>
+          <input type="radio" id="fieldFruitNo" name="frutas" value="false" />
+          Não
+        </label>
+      </div>
+      <div>
+        Quantos litros de água você consome diariamente?
+        <input
+          type="number"
+          id="fieldWater"
+          placeholder="Ex: 2"
+          step="0.5"
+          min="0"
+        />
+      </div>
+      <div>
+        Qual o Horário que você costuma jantar?
+        <input type="time" id="fieldDinner" />
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
