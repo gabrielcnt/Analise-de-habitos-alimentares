@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário de Saúde</title>
+    <title>Formulário de hábitos alimentares</title>
   </head>
   <body>
     <form>
+      <h1>Este formulário é somente para estudo de análise de dados</h1>
       <div>
         Primeiro nome:
         <input type="text" id="fieldName" placeholder="Digite seu nome" />
@@ -23,7 +24,12 @@
 
       <div>
         Idade:
-        <input type="number" id="fieldage" placeholder="Digite sua idade" />
+        <input
+          type="number"
+          id="fieldage"
+          placeholder="Digite sua idade"
+          min="0"
+        />
       </div>
 
       <div>
@@ -39,7 +45,7 @@
       </div>
 
       <div>
-        Quantas refeições você faz por dia? Digite somente a quantidade!
+        Quantas refeições você faz por dia?
         <input
           type="number"
           id="fieldMeals"
