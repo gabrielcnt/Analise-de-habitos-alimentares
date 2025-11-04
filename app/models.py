@@ -10,7 +10,7 @@ class HabitoAlimentar(db.Model):
     idade = db.Column(db.Integer, nullable=False)
     genero = db.Column(db.String(20), nullable=False)
     refeicoes_dia = db.Column(db.Integer, nullable=False)
-    consume_frutas = db.Column(db.Boolean, nullable=False)
+    consome_frutas = db.Column(db.String(20), nullable=False)
     consome_agua_litros = db.Column(db.Float, nullable=False)
     horario_jantar = db.Column(db.String(10), nullable=False)
     data_envio = db.Column(db.DateTime, default=datetime.utcnow)
