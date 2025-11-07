@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Formulário de hábitos alimentares</title>
+  </head>
+  <body>
+    <section class="py-5" style="background-color: #e8e4d9">
+      <div class="container">
+        <div class="bg-white rounded-4 shadow p-5">
+          <form>
+            <!-- titulo e subtitulo-->
+            <div class="mb-4">
+              <h1 class="display-6 fw-bold text-warning mb-3">
+                Este formulário é somente para estudo de análise de dados
+              </h1>
+              <p class="text-muted">
+                Ajude-nos a entender melhor seus hábitos para oferecer um
+                serviço personalizado.
+              </p>
+            </div>
+
+            <!-- primeira linha -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="fieldName" class="form-label fw-medium text-primary"
+                  >Primeiro Nome</label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="fieldName"
+                  placeholder="Seu primeiro nome"
+                />
+              </div>
+              <div class="col-md-6">
+                <label
+                  for="fieldsurname"
+                  class="form-label fw-medium text-primary"
+                  >Sobrenome</label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="fieldsurname"
+                  placeholder="Seu sobrenome"
+                />
+              </div>
+            </div>
+
+            <!-- segunda linha-->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="fieldage" class="form-label fw-medium text-primary"
+                  >Idade</label
+                >
+                <input
+                  type="number"
+                  class="form-control form-control-lg"
+                  id="fieldage"
+                  placeholder="Sua idade"
+                  min="0"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-medium text-primary d-block"
+                  >Gênero</label
+                >
+                <div class="d-flex gap-3">
+                  <div>
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="genero"
+                      id="feminino"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-dark btn-lg" for="feminino"
+                      >Feminino</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="genero"
+                      id="masculino"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-dark btn-lg" for="masculino"
+                      >Masculino</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- terceira linha -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label
+                  for="fieldMeals"
+                  class="form-label fw-medium text-primary"
+                  >Quantas refeições você faz por dia?</label
+                >
+                <input
+                  type="number"
+                  class="form-control form-control-lg"
+                  id="fieldMeals"
+                  placeholder="Número de refeições"
+                  min="0"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-medium text-primary d-block"
+                  >Você consome frutas diariamente?</label
+                >
+                <div class="d-flex gap-3">
+                  <div>
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="frutas"
+                      id="sim"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-dark btn-lg" for="sim"
+                      >Sim</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="frutas"
+                      id="nao"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-dark btn-lg" for="nao"
+                      >Não</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- quarta linha -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label
+                  for="fieldWater"
+                  class="form-label fw-medium text-primary"
+                  >Qual o seu consumo diário de água (em litros)?</label
+                >
+                <input
+                  type="number"
+                  class="form-control form-control-lg"
+                  id="fieldWater"
+                  placeholder="Ex: 2,5"
+                  step="0.5"
+                  min="0"
+                />
+              </div>
+              <div class="col-md-6">
+                <label
+                  for="fieldDinner"
+                  class="form-label fw-medium text-primary"
+                  >Qual o horário do seu jantar?</label
+                >
+                <input
+                  type="time"
+                  class="form-control form-control-lg"
+                  id="fieldDinner"
+                />
+              </div>
+            </div>
+
+            <!-- botão de enviar-->
+            <div class="text-end">
+              <button
+                id="btnEnviar"
+                type="button"
+                class="btn btn-warning btn-lg px-5 fw-bold"
+              >
+                Enviar Respostas
+              </button>
+            </div>
+            <!-- area de feedback -->
+            <div id="alertContainer" class="mt-4"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    (function () {
+      // Helpers
+      const qs = (s) => document.querySelector(s);
+      const btn = qs('#btnEnviar');
+      const alertContainer = qs('#alertContainer');
+
+      function clearAlerts() {
+        alertContainer.innerHTML = '';
+      }
+
+      function showAlert(type, content) {
+        clearAlerts();
+        const wrapper = document.createElement('div');
+        wrapper.className = `alert alert-${type} alert-dismissible fade show`;
+        wrapper.role = 'alert';
+
+        if (Array.isArray(content)) {
+          const ul = document.createElement('ul');
+          ul.className = 'mb-0';
+          content.forEach((c) => {
+            const li = document.createElement('li');
+            li.textContent = c;
+            ul.appendChild(li);
+          });
+          wrapper.appendChild(ul);
+        } else {
+          wrapper.textContent = content;
+        }
+
+        const btnClose = document.createElement('button');
+        btnClose.type = 'button';
+        btnClose.className = 'btn-close';
+        btnClose.setAttribute('data-bs-dismiss', 'alert');
+        btnClose.setAttribute('aria-label', 'Fechar');
+        wrapper.appendChild(btnClose);
+
+        alertContainer.appendChild(wrapper);
+      }
+
+      function getRadioId(name) {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.id : null;
+      }
+
+      function parseNumberFlexible(value) {
+        if (value === null || value === undefined || value === '') return null;
+        const normalized = String(value).replace(',', '.').trim();
+        const n = Number(normalized);
+        return Number.isFinite(n) ? n : null;
+      }
+
+      // Validações idênticas às de app/utils.py
+      function validarTodosCampos(vals) {
+        const erros = [];
+
+        // validar_nome
+        const nome = vals.nome;
+        if (nome === null || nome === undefined || nome === '') {
+          erros.push('O nome é obrigatório');
+        } else {
+          if (typeof nome !== 'string' || nome.trim().length < 3) {
+            erros.push('O nome deve ter pelo menos 3 caracteres');
+          }
+          if (/\d/.test(nome)) {
+            erros.push('O nome não deve conter números');
+          }
+        }
+
+        // validar_sobrenome
+        const sobrenome = vals.sobrenome;
+        if (sobrenome === null || sobrenome === undefined || sobrenome === '') {
+          erros.push('O sobrenome é obrigatório');
+        } else {
+          if (typeof sobrenome !== 'string' || sobrenome.trim().length < 3) {
+            erros.push('O sobrenome deve ter pelo menos 3 caracteres');
+          }
+          if (/\d/.test(sobrenome)) {
+            erros.push('O sobrenome não deve conter números');
+          }
+        }
+
+        // validar_idade
+        const idadeVal = vals.idade;
+        if (idadeVal === null || idadeVal === undefined || idadeVal === '') {
+          erros.push('A idade é obrigatório');
+        } else {
+          const i = parseInt(idadeVal, 10);
+          if (Number.isNaN(i)) {
+            erros.push('Idade inválida');
+          } else {
+            if (i <= 0) erros.push('Idade ser maior que zero');
+            if (i > 120) erros.push('Você não deve ser tão velho(a) assim');
+          }
+        }
+
+        // validar_genero
+        const genero = vals.genero;
+        if (genero === null || genero === undefined || typeof genero !== 'string' || (genero !== 'Feminino' && genero !== 'Masculino')) {
+          erros.push('É necessário selecionar um genero');
+        }
+
+        // validar_refeicoes_dia
+        const qtd = vals.refeicoes_dia;
+        if (qtd === null || qtd === undefined || qtd === '') {
+          erros.push('Informe a quantidade de refeições por dia');
+        } else {
+          const q = parseInt(qtd, 10);
+          if (Number.isNaN(q)) {
+            erros.push('Quantidade de refeições invalida');
+          } else {
+            if (q === 0) erros.push('Como assim você não se alimenta ? não minta e coloque o valor correto');
+            if (q < 0) erros.push('Não pode ser um valor negativo');
+          }
+        }
+
+        // validar_consumo_frutas
+        const frutas = vals.consome_frutas;
+        if (frutas === null || frutas === undefined || typeof frutas !== 'string' || (frutas !== 'sim' && frutas !== 'não')) {
+          erros.push('Informe se consome fruta ou não');
+        }
+
+        // validar_consumo_agua
+        const agua = vals.consome_agua_litros;
+        if (agua === null || agua === undefined || agua === '') {
+          erros.push('Informe o consumo de agua em litros');
+        } else {
+          const c = parseFloat(String(agua).replace(',', '.'));
+          if (Number.isNaN(c)) {
+            erros.push('Consumo de agua invalido');
+          } else {
+            if (c === 0) erros.push('Não bebe agua ?? OLHAA A PEDRAAAAA');
+            if (c < 0) erros.push('Não pode ser um valor negativo');
+          }
+        }
+
+        // validar_horario
+        const horario = vals.horario_jantar;
+        if (horario === null || horario === undefined || horario === '') {
+          erros.push('Informe o horário do jantar');
+        } else if (typeof horario !== 'string') {
+          erros.push('Horário inválido');
+        } else {
+          const h = horario.trim();
+          if (!/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(h)) {
+            erros.push('Formato de horário inválido (use HH:mm)');
+          } else {
+            try {
+              const [hora, minuto] = h.split(':').map((v) => parseInt(v, 10));
+              if (!(0 <= hora && hora <= 23 && 0 <= minuto && minuto <= 59)) {
+                erros.push('Horário fora do intervalo válido (00 - 23:59)');
+              }
+            } catch (e) {
+              erros.push('Horário inválido');
+            }
+          }
+        }
+
+        return erros;
+      }
+
+      async function enviar() {
+        clearAlerts();
+
+        const nome = qs('#fieldName').value || '';
+        const sobrenome = qs('#fieldsurname').value || '';
+        const idade = qs('#fieldage').value;
+        const generoId = getRadioId('genero');
+        // map radio ids to backend expected strings
+        const genero = generoId === 'feminino' ? 'Feminino' : generoId === 'masculino' ? 'Masculino' : null;
+        const refeicoes = qs('#fieldMeals').value;
+        const frutasId = getRadioId('frutas');
+        const consome_frutas = frutasId === 'sim' ? 'sim' : frutasId === 'nao' ? 'não' : null;
+        const aguaVal = qs('#fieldWater').value;
+        const horario = qs('#fieldDinner').value || '';
+
+        const payload = {
+          nome: nome,
+          sobrenome: sobrenome,
+          idade: idade,
+          genero: genero,
+          refeicoes_dia: refeicoes,
+          consome_frutas: consome_frutas,
+          consome_agua_litros: aguaVal,
+          horario_jantar: horario
+        };
+
+        // validação cliente reproduzindo mensagens do servidor
+        const erros = validarTodosCampos(payload);
+        if (erros.length) {
+          showAlert('danger', erros);
+          return;
+        }
+
+        // formatação mínima para envio (idade como int, agua com ponto decimal)
+        const envio = Object.assign({}, payload, {
+          idade: parseInt(payload.idade, 10),
+          consome_agua_litros: String(payload.consome_agua_litros).replace(',', '.')
+        });
+
+        btn.disabled = true;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Enviando...';
+
+        try {
+          console.log('Enviando payload para /form/formulario', envio);
+          const resp = await fetch('form/formulario', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(envio)
+          });
+
+          const data = await resp.json().catch(() => null);
+
+          if (resp.status === 201) {
+            const id = data && data.id ? ` (ID: ${data.id})` : '';
+            showAlert('success', `Dados enviados com sucesso`);
+            // opcional: limpar formulário
+            // qs('form').reset();
+          } else if (resp.status === 400) {
+            if (data && data.erros) {
+              showAlert('danger', data.erros);
+            } else if (data && data.erro) {
+              showAlert('danger', data.erro);
+            } else {
+              showAlert('danger', 'Requisição inválida. Verifique os campos e tente novamente.');
+            }
+          } else if (resp.status >= 500) {
+            const detalhe = data && data.detalhes ? ` Detalhes: ${data.detalhes}` : '';
+            showAlert('danger', `Erro do servidor.${detalhe}`);
+          } else {
+            showAlert('warning', (data && data.erro) || 'Resposta inesperada do servidor.');
+          }
+        } catch (err) {
+          showAlert('danger', `Erro de rede: ${err.message}`);
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+        }
+      }
+
+      btn.addEventListener('click', enviar);
+    })();
+  </script>
+</html>
