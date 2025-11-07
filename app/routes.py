@@ -1,14 +1,16 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app
 from .models import HabitoAlimentar, db
 from .utils import *
 
 form_bp = Blueprint('formulario', __name__)
 
+
+
 @form_bp.route('/formulario', methods=['POST'])
 def formulario_dados():
     try:
         dados = request.get_json()
-
+        current_app.logger.debug(f'Recebido JSON em /form/formulario: {dados}')
         if not dados:
             return jsonify({'erro': 'Dados não fornecidos'}), 400
         
